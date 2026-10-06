@@ -22,7 +22,7 @@
     .intro{max-width:580px;color:var(--muted);font-size:15px;line-height:1.75;margin:0}
     .fiction{display:inline-flex;align-items:center;gap:8px;margin-top:26px;padding:8px 11px;border:1px solid rgba(204,9,9,.42);border-radius:30px;background:rgba(204,9,9,.09);color:#ff8b8b;font-size:9px;font-weight:700;letter-spacing:.12em;text-transform:uppercase}
     .fiction:before{content:"";width:6px;height:6px;border-radius:50%;background:#ed3434;box-shadow:0 0 10px #ed3434}
-    .grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;margin-top:58px}
+    .grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;margin-top:58px}
     .card{min-height:310px;position:relative;display:flex;flex-direction:column;align-items:flex-start;padding:28px;border:1px solid var(--line);border-radius:18px;background:linear-gradient(145deg,rgba(32,20,18,.96),rgba(14,10,9,.98));overflow:hidden}
     .card:after{content:"";position:absolute;width:230px;height:230px;right:-105px;top:-105px;border-radius:50%;background:radial-gradient(circle,rgba(204,9,9,.22),transparent 68%);pointer-events:none}
     .card-top{width:100%;display:flex;align-items:center;justify-content:space-between;position:relative;z-index:1}
@@ -39,6 +39,7 @@
     .status{position:absolute;right:28px;bottom:36px;color:#ff7777;font-size:9px;letter-spacing:.1em;text-transform:uppercase}
     .disclaimer{margin:24px 2px 0;color:#8f8582;font-size:10px}
     footer{display:flex;justify-content:space-between;align-items:center;padding:22px 0 28px;border-top:1px solid var(--line);color:#8f8582;font-size:10px}
+    @media(max-width:900px){.grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
     @media(max-width:680px){.shell{width:min(100% - 30px,520px)}header{height:70px}.logo{width:138px}.header-note{font-size:8px}main{padding:68px 0 50px}.grid{grid-template-columns:1fr;margin-top:38px}.card{min-height:290px;padding:23px}.status{right:23px;bottom:31px}footer{gap:15px;align-items:flex-start;flex-direction:column}}
     @media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important}}
   </style>
@@ -71,8 +72,17 @@
         <a class="action primary" href="dashboard-shopping.html">Explorar a POC <span aria-hidden="true">↗</span></a>
         <span class="status">Dados simulados</span>
       </article>
+
+      <article class="card">
+        <div class="card-top"><span class="number">03</span><span class="category">Customer Insights · Marketing Intelligence</span></div>
+        <div class="symbol" aria-hidden="true">◉</div>
+        <h2>Audience Intelligence para Nike</h2>
+        <p class="description">Uma visão para o time de Customer Insights entender interesses, estilos e preferências de caimento por shopping — e identificar onde testar conteúdo e ativações de marca. Disponibilidade entra como contexto para a decisão.</p>
+        <a class="action primary" href="nike-brand-intelligence.html">Explorar a POC <span aria-hidden="true">↗</span></a>
+        <span class="status">Cenário conceitual</span>
+      </article>
     </section>
-    <p class="disclaimer">Lojas, pessoas, imagens, métricas e cenários apresentados nas POCs são simulados. Nenhum dado real de cliente ou shopping é exibido.</p>
+    <p class="disclaimer">Marcas, lojas, pessoas, imagens, métricas, shoppings e integrações das POCs são demonstrativos. O cenário Nike não representa parceria ou dado oficial.</p>
   </main>
   <footer class="shell"><span>✦ RedHall</span><span>Protótipos para conversar sobre possibilidades.</span></footer>
 </body>
