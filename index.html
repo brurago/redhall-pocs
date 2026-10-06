@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#090707">
+  <meta name="description" content="Protótipos fictícios RedHall para explorar novas experiências nos shoppings.">
+  <title>RedHall · POCs</title>
+  <style>
+    :root{color-scheme:dark;--bg:#090707;--panel:#120d0c;--panel2:#1a1110;--text:#fff6ef;--muted:#b7aaa6;--red:#cc0909;--line:rgba(255,255,255,.14)}
+    *{box-sizing:border-box}
+    body{margin:0;min-height:100vh;background:radial-gradient(ellipse at 50% 0,rgba(126,15,17,.19),transparent 48%),var(--bg);color:var(--text);font:15px/1.5 Arial,Helvetica,sans-serif}
+    a{color:inherit}
+    .shell{width:min(1120px,calc(100% - 48px));margin:0 auto}
+    header{height:86px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line)}
+    .logo{display:block;width:166px;height:auto}
+    .header-note{font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted)}
+    main{padding:96px 0 76px}
+    .eyebrow{display:flex;align-items:center;gap:10px;color:#ff7777;font-size:10px;font-weight:700;letter-spacing:.2em;text-transform:uppercase}
+    .eyebrow:before{content:"";width:24px;height:1px;background:var(--red)}
+    h1{max-width:760px;margin:20px 0 16px;font:clamp(42px,7vw,76px)/.99 Georgia,'Times New Roman',serif;font-weight:400;letter-spacing:-.045em}
+    .intro{max-width:580px;color:var(--muted);font-size:15px;line-height:1.75;margin:0}
+    .fiction{display:inline-flex;align-items:center;gap:8px;margin-top:26px;padding:8px 11px;border:1px solid rgba(204,9,9,.42);border-radius:30px;background:rgba(204,9,9,.09);color:#ff8b8b;font-size:9px;font-weight:700;letter-spacing:.12em;text-transform:uppercase}
+    .fiction:before{content:"";width:6px;height:6px;border-radius:50%;background:#ed3434;box-shadow:0 0 10px #ed3434}
+    .grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;margin-top:58px}
+    .card{min-height:310px;position:relative;display:flex;flex-direction:column;align-items:flex-start;padding:28px;border:1px solid var(--line);border-radius:18px;background:linear-gradient(145deg,rgba(32,20,18,.96),rgba(14,10,9,.98));overflow:hidden}
+    .card:after{content:"";position:absolute;width:230px;height:230px;right:-105px;top:-105px;border-radius:50%;background:radial-gradient(circle,rgba(204,9,9,.22),transparent 68%);pointer-events:none}
+    .card-top{width:100%;display:flex;align-items:center;justify-content:space-between;position:relative;z-index:1}
+    .number{color:#ff7777;font:italic 17px Georgia,serif}
+    .category{color:var(--muted);font-size:9px;letter-spacing:.16em;text-transform:uppercase}
+    .symbol{width:48px;height:48px;display:grid;place-items:center;margin:28px 0 15px;border:1px solid rgba(204,9,9,.33);border-radius:14px;background:rgba(204,9,9,.1);color:#ff7777;font-size:22px}
+    h2{position:relative;z-index:1;margin:0;font:30px/1.12 Georgia,'Times New Roman',serif;font-weight:400}
+    .description{max-width:420px;margin:10px 0 24px;color:var(--muted);font-size:12px;line-height:1.65}
+    .action{margin-top:auto;display:inline-flex;align-items:center;gap:15px;padding:11px 14px;border:1px solid rgba(255,255,255,.22);border-radius:9px;background:transparent;text-decoration:none;font-size:11px;font-weight:700;transition:.18s}
+    .action:hover,.action:focus-visible{border-color:#ff7777;background:rgba(204,9,9,.14);outline:none}
+    .action.primary{border-color:transparent;background:linear-gradient(95deg,#cc0909,#a10022)}
+    .action.primary:hover,.action.primary:focus-visible{filter:brightness(1.18)}
+    .action[aria-disabled="true"]{color:#958987;border-color:rgba(255,255,255,.12);cursor:default}
+    .status{position:absolute;right:28px;bottom:36px;color:#ff7777;font-size:9px;letter-spacing:.1em;text-transform:uppercase}
+    .disclaimer{margin:24px 2px 0;color:#8f8582;font-size:10px}
+    footer{display:flex;justify-content:space-between;align-items:center;padding:22px 0 28px;border-top:1px solid var(--line);color:#8f8582;font-size:10px}
+    @media(max-width:680px){.shell{width:min(100% - 30px,520px)}header{height:70px}.logo{width:138px}.header-note{font-size:8px}main{padding:68px 0 50px}.grid{grid-template-columns:1fr;margin-top:38px}.card{min-height:290px;padding:23px}.status{right:23px;bottom:31px}footer{gap:15px;align-items:flex-start;flex-direction:column}}
+    @media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important}}
+  </style>
+</head>
+<body>
+  <header class="shell">
+    <a href="./" aria-label="RedHall POCs"><img class="logo" src="redhall-horizontal-white.png" alt="RedHall"></a>
+    <span class="header-note">Laboratório de experiências</span>
+  </header>
+  <main class="shell">
+    <div class="eyebrow">RedHall · experiências em movimento</div>
+    <h1>Ideias que aproximam pessoas e shopping.</h1>
+    <p class="intro">Uma coleção de protótipos para explorar novas formas de descobrir, escolher e viver os espaços RedHall.</p>
+    <div class="fiction">Demonstrações fictícias</div>
+
+    <section class="grid" aria-label="Provas de conceito">
+      <article class="card">
+        <div class="card-top"><span class="number">01</span><span class="category">Clienteling · experiência pessoal</span></div>
+        <div class="symbol" aria-hidden="true">✦</div>
+        <h2>Prisma para Claudia</h2>
+        <p class="description">Uma agente acompanha Claudia na criação do look para um casamento, conectando alfaiataria, beleza e acessórios das lojas do shopping.</p>
+        <a class="action primary" href="claudia-prisma.html">Explorar a POC <span aria-hidden="true">↗</span></a>
+      </article>
+
+      <article class="card">
+        <div class="card-top"><span class="number">02</span><span class="category">Inteligência · operação do shopping</span></div>
+        <div class="symbol" aria-hidden="true">▥</div>
+        <h2>Dashboard do shopping</h2>
+        <p class="description">Uma visão para transformar sinais de operação e comportamento em decisões mais claras para a gestão do shopping.</p>
+        <span class="action" aria-disabled="true">POC em preparação <span aria-hidden="true">·</span></span>
+        <span class="status">Em breve</span>
+      </article>
+    </section>
+    <p class="disclaimer">Lojas, pessoas, imagens, métricas e cenários apresentados nas POCs são simulados. Nenhum dado real de cliente ou shopping é exibido.</p>
+  </main>
+  <footer class="shell"><span>✦ RedHall</span><span>Protótipos para conversar sobre possibilidades.</span></footer>
+</body>
+</html>
